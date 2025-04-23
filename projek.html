@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PortfolioAndri</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #0f0f0f;
+      color: white;
+    }
+
+    header {
+      background: #1a1a1a;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .logo {
+      font-weight: bold;
+      font-size: 18px;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+    }
+    nav a:hover {
+      color: #00f7ff;
+    }
+
+    .container {
+      padding: 80px 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    h1.title {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+    .card {
+      background: #1c1c1c;
+      border-radius: 16px;
+      padding: 30px 20px;
+      box-shadow: 0 0 15px rgba(0, 247, 255, 0.2);
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+      overflow: hidden;
+      text-decoration: none;
+      color: white;
+      display: block;
+    }
+    .card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, #00f7ff33, transparent);
+      transform: rotate(45deg);
+      transition: all 0.5s ease;
+    }
+    .card:hover::before {
+      left: 0;
+      top: 0;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 30px rgba(0, 247, 255, 0.5);
+    }
+    .card h3 {
+      margin-bottom: 15px;
+      font-size: 22px;
+    }
+    .card p {
+      color: #aaa;
+      font-size: 15px;
+    }
+
+    footer {
+      background: #1a1a1a;
+      padding: 50px 20px;
+      text-align: center;
+    }
+    .social-icons a {
+      color: white;
+      margin: 0 10px;
+      font-size: 20px;
+      transition: color 0.3s;
+    }
+    .social-icons a:hover {
+      color: #00f7ff;
+    }
+
+    @media (max-width: 768px) {
+      .logo { font-size: 16px; }
+      h1.title { font-size: 28px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <div class="logo">Andri</div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="#about">About</a>
+      <a href="#project">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Konten: 6 Card Modern -->
+  <section class="container">
+    <h1 class="title">My Projects</h1>
+    <div class="card-grid">
+      <a href="fotoSop.html" class="card">
+        <h3>Project Photoshop</h3>
+        <p></p>
+      </a>
+      <a href="webproject.html" class="card">
+        <h3>Project Website</h3>
+        <p>Aplikasi penangan kesehatan ayam berbasis Website</p>
+      </a>
+      <a href="yy.html" class="card">
+        <h3>Project Game</h3>
+        <p></p>
+      </a>
+      <a href="https://youtube.com/@dokumentasii_hidup?si=qoMR4o_fzxqDYYTI" class="card">
+        <h3>Youtube</h3>
+        <p></p>
+      </a>
+      <a href="project-epsilon.html" class="card">
+        <h3>Up Coming</h3>
+        <p></p>
+      </a>
+      <a href="project-zeta.html" class="card">
+        <h3>Up Coming</h3>
+        <p></p>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-github"></i></a>
+    </div>
+    <p style="margin-top: 20px;">&copy; 2025 Portfolio Kamu. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
